@@ -265,6 +265,14 @@
         // Remove the rogue No button if it's still floating around
         if (btnNo) btnNo.style.display = 'none';
 
+        // 🔔 SEND PUSH NOTIFICATION — Aditi said YES!
+        // Subscribe to this topic on your phone via ntfy.sh app
+        fetch('https://ntfy.sh/aditi-said-yes-rahul-2026', {
+            method: 'POST',
+            headers: { 'Title': '💖 ADITI SAID YES! 💖', 'Priority': '5', 'Tags': 'heart_eyes,tada,sparkles' },
+            body: '🎉 SHE CLICKED YES! Dil dooba and she said YES! Time to celebrate! 🥳💃🕺'
+        }).catch(() => { }); // Silent fail — don't ruin the celebration
+
         // Hide question section
         questionSection.style.display = 'none';
 
